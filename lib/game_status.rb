@@ -56,5 +56,6 @@ def over?(board)
 end
 
 def winner(board)
-  won?(board).detect
+   won?(board) && board[won?(board)[0]
+  end
 end
