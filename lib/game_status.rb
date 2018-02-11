@@ -36,9 +36,10 @@ end
 end
 
 def full?(board)
+  all_taken = true 
   board.each do |position_taken|
-    if position_taken == "X" || "O"
-      true
+    if position_taken."X" || "O"
+      all_taken = false
     else
       false
     end
