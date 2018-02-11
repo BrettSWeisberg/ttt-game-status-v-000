@@ -26,13 +26,14 @@ def won?(board)
   position_1 = board[win_index_1]
   position_2 = board[win_index_2]
   position_3 = board[win_index_3]
-
+ 
+  #combins both sections above
   #position_1 = board[win_combo[0]]
   #position_2 = board[win_combo[1]]
   #position_3 = board[win_combo[2]]
-  
 
-  if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
+  if position_1 == "X" && position_2 == "X" && position_3 == "X" ||
+     position_1 == "O" && position_2 == "O" && position_3 == "O"
    return win_combo
   else
    false
@@ -42,8 +43,8 @@ end
 
 def full?(board)
   all_taken = true
-  board.each do |position_taken|
-    if position_taken == "X" || "O"
+  board.each do |position|
+    if position == "X" || "O"
       all_taken = false
     end
   end
